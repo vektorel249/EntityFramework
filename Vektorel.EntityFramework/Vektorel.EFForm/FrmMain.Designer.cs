@@ -46,6 +46,7 @@
             // 
             // dgvResult
             // 
+            dgvResult.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvResult.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dgvResult.Location = new Point(12, 12);
             dgvResult.Name = "dgvResult";
