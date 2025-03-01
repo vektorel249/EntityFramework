@@ -1,7 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using System.Diagnostics;
 using Vektorel.Data.Entities;
 
 namespace Vektorel.Data.Context;
