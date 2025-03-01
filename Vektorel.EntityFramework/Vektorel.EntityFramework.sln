@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.EndUser", "Vektore
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.Data", "Vektorel.Data\Vektorel.Data.csproj", "{45033F32-E764-4FC9-AC8B-86D25CAEA7EB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Vektorel.EFForm", "Vektorel.EFForm\Vektorel.EFForm.csproj", "{919058D8-898C-4EB9-AEE3-59B2D288BFBE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{45033F32-E764-4FC9-AC8B-86D25CAEA7EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{45033F32-E764-4FC9-AC8B-86D25CAEA7EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{45033F32-E764-4FC9-AC8B-86D25CAEA7EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{919058D8-898C-4EB9-AEE3-59B2D288BFBE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{919058D8-898C-4EB9-AEE3-59B2D288BFBE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{919058D8-898C-4EB9-AEE3-59B2D288BFBE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{919058D8-898C-4EB9-AEE3-59B2D288BFBE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
