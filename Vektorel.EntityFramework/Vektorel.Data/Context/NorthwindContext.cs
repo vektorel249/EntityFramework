@@ -23,4 +23,6 @@ public class NorthwindContext : DbContext
     public DbSet<Employee> Employees { get; set; }
     public DbSet<Order> Orders { get; set; }
     public DbSet<OrderDetail> OrderDetails { get; set; }
+    public DbSet<Vehicle> Vehicles { get; set; }
+    public DbSet<EmployeeVehicle> EmployeeVehicles { get; set; }
 }

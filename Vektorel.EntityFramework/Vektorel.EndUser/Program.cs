@@ -1,4 +1,5 @@
 ﻿using Vektorel.Data.Context;
+using Vektorel.Data.Entities;
 
 var context = new NorthwindContext();
 var categories = context.Categories
@@ -25,6 +26,48 @@ foreach (var product in products)
 {
     Console.WriteLine("{0, 2} - {1, -20} - {2}", product.Id, product.Name, product.Price);
 }
+#region Yeni Tablo
+
+
+var vehicles = context.Vehicles.ToList();
+foreach (var vehicle in vehicles)
+{
+    Console.WriteLine(vehicle.Brand + " " + vehicle.VehicleType);
+}
+
+#endregion
+
+#region Yeni Kayıt
+var saved = false;
+if (!saved)
+{
+    var newVehicle = new EmployeeVehicle
+    {
+        EmployeeID = 1,
+        VehicleID = 1,
+        StartDate = DateTime.Now.AddMonths(-5),
+    };
+
+    context.EmployeeVehicles.Add(newVehicle);
+    context.SaveChanges(); 
+}
+else
+{
+    var savedEntity = context.EmployeeVehicles.First(f => f.ID == 1);
+    savedEntity.EndDate = DateTime.Now;
+    context.EmployeeVehicles.Update(savedEntity);
+    context.SaveChanges();
+}
+
+var shouldDelete = false;
+if (shouldDelete)
+{
+    var savedEntity = context.EmployeeVehicles.First(f => f.ID == 1);
+    context.EmployeeVehicles.Remove(savedEntity);
+    context.SaveChanges();
+}
+#endregion
+
 
 //"SELECT * FROM Products WHERE Name = '"+ txtName.Text +"'"
 // SELECT * FROM Products WHERE Name = 'Chai'
@@ -54,4 +97,20 @@ foreach (var product in products)
  {
   
  }
+ */
+
+
+
+
+/*
+ 
+ EF (Entity Framework) => Database First
+                       => Code First => Mİgration
+
+Yeni bir yapı değişikliği için kod oluşturma süreci 
+-- Add-Migration VehicleEmployeeTable -P Vektorel.Data -C NorthwindContext -S Vektorel.Data 
+
+
+Oluşan kodun veritabanına yansıtılması
+-- Update-Database -Project Vektorel.Data -Context NorthwindContext -S Vektorel.Data -Verbose
  */
